@@ -37,6 +37,15 @@
       ],
       "kind": "keep_separate",
       "decided_at": "12:15"
+    },
+    {
+      "id": "I3",
+      "records": [
+        "R1",
+        "R2"
+      ],
+      "kind": "split",
+      "decided_at": "16:00"
     }
   ],
   "opportunities": [
