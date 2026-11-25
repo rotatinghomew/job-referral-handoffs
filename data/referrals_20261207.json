@@ -1,0 +1,187 @@
+{
+  "registrants": [
+    {
+      "id": "R1",
+      "station": "ST1",
+      "hint_id": "h-A",
+      "checked_contact": "M-7"
+    },
+    {
+      "id": "R2",
+      "station": "ST2",
+      "hint_id": "h-B",
+      "checked_contact": "M-7"
+    },
+    {
+      "id": "R3",
+      "station": "ST2",
+      "hint_id": "h-A",
+      "checked_contact": "M-8"
+    }
+  ],
+  "identity_cases": [
+    {
+      "id": "I1",
+      "records": [
+        "R1",
+        "R2"
+      ],
+      "kind": "merge",
+      "decided_at": "12:00"
+    },
+    {
+      "id": "I2",
+      "records": [
+        "R1",
+        "R3"
+      ],
+      "kind": "keep_separate",
+      "decided_at": "12:15"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "J1",
+      "employer": "E1",
+      "legacy_key": "A-7",
+      "opening": 1,
+      "named": "包装质检",
+      "slots": 2
+    },
+    {
+      "id": "J2",
+      "employer": "E1",
+      "legacy_key": "A-7",
+      "opening": 2,
+      "named": "包装质检",
+      "slots": 1
+    },
+    {
+      "id": "J3",
+      "employer": "E2",
+      "legacy_key": "A-7",
+      "opening": 1,
+      "named": "包装质检",
+      "slots": 2
+    }
+  ],
+  "grants": [
+    {
+      "id": "G1",
+      "registrant": "R1",
+      "employer": "E1",
+      "opportunity": "J1",
+      "fields": [
+        "work_history",
+        "contact_route"
+      ],
+      "start": "08:00",
+      "expires": "14:00",
+      "withdrawn": "13:00"
+    },
+    {
+      "id": "G2",
+      "registrant": "R2",
+      "employer": "E1",
+      "opportunity": "J1",
+      "fields": [
+        "compact_resume"
+      ],
+      "start": "08:15",
+      "expires": "16:00",
+      "withdrawn": null
+    },
+    {
+      "id": "G3",
+      "registrant": "R2",
+      "employer": "E2",
+      "opportunity": "J3",
+      "fields": [
+        "compact_resume",
+        "contact_route"
+      ],
+      "start": "08:18",
+      "expires": "16:00",
+      "withdrawn": null
+    }
+  ],
+  "referrals": [
+    {
+      "id": "A1",
+      "registrant": "R1",
+      "opportunity": "J1",
+      "grant": "G1",
+      "station": "ST1",
+      "sent": "09:00",
+      "received": "09:15"
+    },
+    {
+      "id": "A2",
+      "registrant": "R2",
+      "opportunity": "J1",
+      "grant": "G2",
+      "station": "ST2",
+      "sent": "09:05",
+      "received": null
+    },
+    {
+      "id": "A3",
+      "registrant": "R2",
+      "opportunity": "J3",
+      "grant": "G3",
+      "station": "ST2",
+      "sent": "09:20",
+      "received": "09:30"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "V1",
+      "referral": "A1",
+      "employer": "E1",
+      "slot": "W13",
+      "start": "15:00",
+      "end": "15:30",
+      "confirmed": "09:35"
+    },
+    {
+      "id": "V2",
+      "referral": "A3",
+      "employer": "E2",
+      "slot": "W99",
+      "start": "15:10",
+      "end": "15:40",
+      "confirmed": "09:45"
+    }
+  ],
+  "case_updates": [
+    {
+      "id": "C1",
+      "kind": "owner_choice",
+      "entity": "J1",
+      "station": "ST2",
+      "occurred": "12:30"
+    },
+    {
+      "id": "C2",
+      "kind": "acknowledge_contact",
+      "entity": "V1",
+      "station": "ST2",
+      "occurred": "12:45"
+    },
+    {
+      "id": "C3",
+      "kind": "received",
+      "entity": "A2",
+      "station": "ST2",
+      "occurred": "13:05"
+    },
+    {
+      "id": "C4",
+      "kind": "choose_slot",
+      "entity": "V1",
+      "station": "ST2",
+      "occurred": "13:10"
+    }
+  ]
+}
